@@ -1,0 +1,17 @@
+{
+  "name": "demo-bot",
+  "version": "1.0.0",
+  "description": "demo bot",
+  "main": "index.js",
+  "author": "reviakindi@gmail.com",
+  "license": "MIT",
+  "scripts": {
+    "dev": "nodemon src/index.js"
+  },
+  "dependencies": {
+    "express": "^4.17.1"
+  },
+  "devDependencies": {
+    "nodemon": "^1.19.1"
+  }
+}
