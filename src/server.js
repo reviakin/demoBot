@@ -13,11 +13,11 @@ app.use(urlencoded({ extended: true }))
 app.use(cors())
 app.use(morgan('dev'))
 botStart()
-
+var port = 'https://demo-rd-bot.herokuapp.com/'
 export const start = async () => {
   try {
-    app.listen(config.port, () => {
-      console.log(`started in ${config.env} mode, on ${config.port}`)
+    app.listen(port, () => {
+      console.log(`started in ${config.env} mode, on ${port}`)
     })
   } catch (e) {
     console.error(e)
