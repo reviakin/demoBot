@@ -16,7 +16,7 @@ botStart()
 
 export const start = async () => {
   try {
-    app.listen(config.port, () => {
+    app.listen(process.env.PORT, () => {
       console.log(`started in ${config.env} mode, on ${config.port}`)
     })
   } catch (e) {
