@@ -1,12 +1,18 @@
 import TB from 'node-telegram-bot-api'
-import { TOKEN } from '../../token'
+import dotenv from 'dotenv'
 
-const bot = new TB(TOKEN, { polling: true })
+dotenv.config()
+const token = process.env.TOKEN
+// console.log(token)
+/**
+ *  !get token from process.env variable
+ */
+const bot = new TB(token, { polling: true })
 
 export const botStart = async () => {
   try {
     /**
-     *  Bot send message if user didn't ask or answer to question
+     *  !Bot send message if user didn't ask or answer to question
      */
 
     bot.on('message', msg => {
