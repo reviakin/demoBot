@@ -14,11 +14,6 @@ app.use(cors())
 app.use(morgan())
 botStart()
 
-// const hostname = process.env.HOST
-// const port = process.env.PORT
-
-// console.log(process.env)
-
 export const start = async () => {
   try {
     app.listen(config.port, () => {
