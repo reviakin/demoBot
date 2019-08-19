@@ -5,15 +5,22 @@ const bot = new TB(TOKEN, { polling: true })
 
 export const botStart = async () => {
   try {
+    /**
+     *  Bot send message if user didn't ask or answer to question
+     */
+
     bot.on('message', msg => {
-      const Hi = 'hi'
       if (
-        msg.text
+        !msg.text
           .toString()
           .toLowerCase()
-          .indexOf(Hi) === 0
+          .includes('?') &&
+        !msg.reply_to_message
       ) {
-        bot.sendMessage(msg.chat.id, 'Hello dear user')
+        bot.sendMessage(
+          msg.chat.id,
+          'Please ask a question or answer a user message'
+        )
       }
     })
   } catch (e) {
