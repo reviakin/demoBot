@@ -7,9 +7,9 @@
   "license": "MIT",
   "scripts": {
     "build": "babel src --out-dir dist",
-    "dev": "rm -rf dist && yarn build && nodemon dist",
-    "restart": "rm -rf dist && yarn build && node dist",
-    "start": "rm -rf dist && yarn build && node dist"
+    "dev": "yarn rimraf dist && yarn build && nodemon dist",
+    "restart": "rimraf dist && yarn build && node dist",
+    "start": "yarn rimraf dist && yarn build && node dist"
   },
   "dependencies": {
     "body-parser": "^1.19.0",
@@ -17,9 +17,7 @@
     "dotenv": "^8.1.0",
     "express": "^4.17.1",
     "morgan": "^1.9.1",
-    "node-telegram-bot-api": "^0.30.0"
-  },
-  "devDependencies": {
+    "node-telegram-bot-api": "^0.30.0",
     "@babel/cli": "^7.0.0",
     "@babel/core": "^7.0.0",
     "@babel/plugin-proposal-class-properties": "^7.0.0",
@@ -28,6 +26,9 @@
     "babel-core": "7.0.0-bridge.0",
     "babel-eslint": "^8.2.1",
     "babel-jest": "^23.4.2",
+    "rimraf": "^3.0.0"
+  },
+  "devDependencies": {
     "eslint": "^4.15.0",
     "eslint-config-prettier": "^2.9.0",
     "eslint-config-standard": "^11.0.0",
