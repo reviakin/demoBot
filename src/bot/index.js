@@ -21,12 +21,16 @@ export const botStart = async () => {
           .toString()
           .toLowerCase()
           .includes('?') &&
+        !msg.text
+          .toString()
+          .toLowerCase()
+          .includes('@') &&
         !msg.reply_to_message
       ) {
         bot.sendMessage(
-          msg.chat.id,
+          msg.from.id,
           // `Dear ${msg.from.username}, please ask a question or answer a user message`
-          `Уважаемый ${msg.from.username}, пожалуйста задайте вопрос или ответьте пользователю.`
+          `Уважаемый ${msg.from.username}, пожалуйста задайте вопрос, ответьте или напишите обращаясь к пользователю.`
         )
       }
     })
