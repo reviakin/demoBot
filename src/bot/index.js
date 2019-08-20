@@ -15,6 +15,7 @@ export const botStart = async () => {
      */
 
     bot.on('message', msg => {
+      console.log(msg)
       if (
         !msg.text
           .toString()
