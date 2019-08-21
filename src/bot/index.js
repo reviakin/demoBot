@@ -11,7 +11,7 @@ const bot = new TB(token, { polling: true })
 export const botStart = async () => {
   try {
     /**
-     *  !Bot send message if user didn't ask or answer to question
+     *  !Bot to reply if user didn't ask or didn't contact the user
      */
 
     bot.on('message', msg => {
@@ -29,7 +29,8 @@ export const botStart = async () => {
       ) {
         bot.sendMessage(
           msg.chat.id,
-          `Dear ${msg.from.username}, please ask a question, answer or write to the user.`
+          `Dear @${msg.from.username}, please ask a question, answer or write to the user.`,
+          { reply_to_message_id: msg.message_id }
         )
       }
     })
