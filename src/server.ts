@@ -1,7 +1,7 @@
-import express from 'express'
+import * as express from 'express'
 import { json, urlencoded } from 'body-parser'
-import cors from 'cors'
-import morgan from 'morgan'
+import * as cors from 'cors'
+import * as morgan from 'morgan'
 
 import { botStart } from './bot'
 import config from './config'
@@ -16,9 +16,10 @@ app.use(morgan('dev'))
 botStart()
 
 export const start = () => {
+  const { port, env } = config
   try {
-    app.listen(config.port, () => {
-      console.log(`started in ${config.env} mode, on ${config.port}`)
+    app.listen(port, () => {
+      console.log(`started in ${env} mode, on ${port}`)
     })
   } catch (e) {
     console.error(e)

@@ -1,5 +1,6 @@
-import dotenv from 'dotenv'
-dotenv.config()
+import { config } from 'dotenv'
+config()
+
 const env = process.env.NODE_ENV
 
 export const pordConfig = {
