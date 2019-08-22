@@ -31,3 +31,11 @@ Finally, while in the top-level folder of this project, download and install thi
 ```
 yarn
 ```
+
+You need get bot-token by BotFather and put it in file ".env". for example:
+
+(<- .env ->)
+
+```
+TOKEN=1234567890987
+```
