@@ -1,12 +1,12 @@
 <table align="center">
   <tr>
     <td align="center">
-      🐥 <strong>OBVIOUS BOT</strong> ️️️🐥
+       <h1 align="center">🐥 <strong>OBVIOUS BOT</strong> ️️️🐥</h1>
     </td>
   </tr>
   <tr>
     <td>
-     The Bot to reply if user didn't ask or didn't contact the user</a>
+     <h2 align="center">The Bot to reply if user didn't ask or didn't contact the user </h2>
     </td>
   </tr>
 </table>
