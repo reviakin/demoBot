@@ -6,7 +6,7 @@
   </tr>
   <tr>
     <td>
-     <h2 align="center">The Bot to reply if user didn't ask or didn't contact the user </h2>
+     <h2 align="center">The Bot replies to user's message if it doesn't contain question mark or reply to other user</h2>
     </td>
   </tr>
 </table>
@@ -32,10 +32,10 @@ Finally, while in the top-level folder of this project, download and install thi
 yarn
 ```
 
-You need get bot-token by BotFather and put it in file ".env". for example:
-
+You need to get bot-token by BotFather and put it in file ".env". for example:
 (<- .env ->)
 
 ```
 TOKEN=1234567890987
 ```
+<a href="https://t.me/@demoRDBot">SEND MESSAGE</a>
