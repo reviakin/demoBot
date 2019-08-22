@@ -35,7 +35,7 @@ export const botStart = async () => {
       ) {
         bot.sendMessage(
           msg.chat.id,
-          `Уважаемый @${msg.from.username}, пожалуйста задайте вопрос, ответьте или напишите обращаясь к пользователю.`,
+          `Dear @${msg.from.username}, please ask a question, answer or write to the user`,
           { reply_to_message_id: msg.message_id }
         )
       }
