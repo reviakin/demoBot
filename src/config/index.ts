@@ -1,6 +1,6 @@
-import dotenv from 'dotenv'
+import { config } from 'dotenv'
 
-dotenv.config()
+config()
 const env = process.env.NODE_ENV || 'development'
 
 const baseConfig = {
@@ -9,7 +9,13 @@ const baseConfig = {
   port: 3000
 }
 
-let envConfig = {}
+interface IEnvConfig {
+  env?: string
+  isDev?: boolean
+  port?: number
+}
+
+let envConfig: IEnvConfig = {}
 
 switch (env) {
   case 'development':

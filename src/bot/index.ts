@@ -1,12 +1,16 @@
-import TB from 'node-telegram-bot-api'
-import dotenv from 'dotenv'
+import * as Telegrambot from 'node-telegram-bot-api'
+import { config } from 'dotenv'
 
-dotenv.config()
-const token = process.env.TOKEN
+config()
+
+let token = ''
+if (process.env.TOKEN) {
+  token = process.env.TOKEN
+}
 /**
  *  !get token from process.env variable
  */
-const bot = new TB(token, { polling: true })
+const bot = new Telegrambot(token, { polling: true })
 
 export const botStart = async () => {
   try {
@@ -17,6 +21,8 @@ export const botStart = async () => {
     bot.on('message', msg => {
       console.log(msg)
       if (
+        msg.text &&
+        msg.from &&
         !msg.text
           .toString()
           .toLowerCase()
