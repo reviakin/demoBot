@@ -13,7 +13,7 @@
 
 <p align='center'>
     <a href="https://vk.com/frontendbasics" target='_blank'>
-        <img height=150 width=300 src='https://user-images.githubusercontent.com/34170008/63491386-be2e1700-c4bf-11e9-9940-c65bd19a3fcf.jpg' />
+        <img height=150 width=200 src='https://user-images.githubusercontent.com/34170008/63491386-be2e1700-c4bf-11e9-9940-c65bd19a3fcf.jpg' />
     </a>
 </p>
 
@@ -38,4 +38,6 @@ You need to get bot-token by BotFather and put it in file ".env". for example:
 ```
 TOKEN=1234567890987
 ```
+<p align='center'>
 <a href="https://t.me/@demoRDBot">SEND MESSAGE</a>
+</p>
