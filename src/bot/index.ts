@@ -40,6 +40,9 @@ export const botStart = async () => {
         )
       }
     })
+    bot.on('new_chat_members', nMember => {
+      bot.sendMessage(nMember.chat.id, `Welcome to our chat.`)
+    })
   } catch (e) {
     console.error(e)
   }
