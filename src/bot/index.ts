@@ -35,16 +35,13 @@ export const botStart = async () => {
       ) {
         bot.sendMessage(
           msg.chat.id,
-          `Уважаемый @${msg.from.username}, пожалуйста задайте вопрос, ответьте или напишите обращаясь к пользователю.`,
+          `Dear @${msg.from.username}, please ask a question, answer or write to the user.`,
           { reply_to_message_id: msg.message_id }
         )
       }
     })
     bot.on('new_chat_members', nMember => {
-      bot.sendMessage(
-        nMember.chat.id,
-        `Приветствуем в нашем чате. Будьте вежливы и с утверждением обращайтесь к конкретному пользователю. Расскажите как вас зовут, что вы умеете и чему хотите научиться.`
-      )
+      bot.sendMessage(nMember.chat.id, `Welcome to our chat.`)
     })
   } catch (e) {
     console.error(e)
