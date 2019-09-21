@@ -1,6 +1,8 @@
 import * as Telegrambot from 'node-telegram-bot-api'
 import { config } from 'dotenv'
 
+import envConfig from '../config'
+
 config()
 
 let token = ''
@@ -17,7 +19,11 @@ export const botStart = async () => {
     /**
      *  !Bot to reply if user didn't ask or didn't contact the user
      */
-
+    if (envConfig.isProd && envConfig.token && envConfig.url) {
+      bot.setWebHook(envConfig.url + envConfig.token)
+    } else {
+      bot.deleteWebHook()
+    }
     bot.on('message', msg => {
       console.log(msg)
       if (

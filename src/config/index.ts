@@ -13,6 +13,9 @@ interface IEnvConfig {
   env?: string
   isDev?: boolean
   port?: number
+  isProd?: boolean
+  token?: string
+  url?: string
 }
 
 let envConfig: IEnvConfig = {}
